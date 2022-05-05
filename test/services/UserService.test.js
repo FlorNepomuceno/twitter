@@ -17,4 +17,5 @@ describe("Test de UserService", () => {
         expect(userInfoInList[2]).toBe("Flor")
         expect(userInfoInList[3]).toBe("Sin bio")
     })
+    
 })
