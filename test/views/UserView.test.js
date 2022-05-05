@@ -7,5 +7,10 @@ describe("Tests de UserViews", () => {
         const result = UserView.createUser(payload)
         expect(result.error).toMatch(/payload no existe/)
     })
+    test("Validar si payload contenga (username, name, id) un valor null y si hay regrese Error: necesitan tener un valor válido", () => {
+        const payload = {username: null, name: 12, id: "id"}
+        const result = UserView.createUser(payload)
+        expect(result.error).toMatch(/necesitan tener un valor válido/)
+    })
 
 })
